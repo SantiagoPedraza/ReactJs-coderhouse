@@ -1,0 +1,7 @@
+navbar-nav .show>.nav-link{
+    color: rgb(106, 98, 48);
+}
+
+.navbar-brand{
+    color: aliceblue;
+}
