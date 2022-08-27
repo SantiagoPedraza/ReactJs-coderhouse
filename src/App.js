@@ -4,6 +4,7 @@ import {NavBar} from './componentes/NavBar'
 import IndividualIntervalsExample from './componentes/carrusel';
 import GridExample from './componentes/cards'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemListConteiner from './componentes/ItemListConteiner';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <IndividualIntervalsExample/>
       </div>
       <div>
-        <h2>NUESTRAS VARIEDADES</h2>
+      <ItemListConteiner titulo="nuestras variedads"/>
       <GridExample/>
       </div>
 
@@ -34,5 +35,4 @@ function App() {
 }
 
 export default App;
-
 
