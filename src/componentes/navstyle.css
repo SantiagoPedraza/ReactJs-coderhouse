@@ -19,3 +19,16 @@ img{
 
 }
 
+.Card{
+    width: 400px;
+    height: 400px;
+}
+
+p{
+    color: crimson;
+}
+
+.mx-2{
+    color: crimson;
+}
+
