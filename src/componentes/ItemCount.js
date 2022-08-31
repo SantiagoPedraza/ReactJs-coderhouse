@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 const Contador = () => {
 
     const [counter, setCounter] = useState(0)
-    const [saludar, setSaludar] = useState(true)
+   
 
     const handleSumar = () => {
         setCounter(counter + 1)
@@ -16,14 +16,6 @@ const Contador = () => {
         }
     }
 
-    const handleSaludar = () => {
-        setSaludar(!saludar)
-        // if (saludar) {
-        //     setSaludar(false)
-        // } else {
-        //     setSaludar(true)
-        // }
-    }
 
     // console.log("Contador Montado!")
     
@@ -57,12 +49,7 @@ const Contador = () => {
             <p>Último click: {new Date().toLocaleString()}</p>
             <hr/>
 
-            <button 
-                onClick={handleSaludar} 
-                className={saludar ? "btn btn-success" : "btn btn-info"}
-            >
-                { saludar ? "Hola!" : "Chau!" }
-            </button>
+           
         </div>
     )
 }

@@ -1,15 +1,32 @@
 import './navstyle.css';
-import Contador from './ItemCount';
+import { useEffect, useState } from "react"
+import { pedirDatos } from "../../helpers/pedirDatos"
+import ItemList from "../ItemList/ItemList"
 
-const ItemListConteiner = ({titulo})=>{
-    return(
+
+const ItemListContainer = () => {
+   
+    const [productos, setProductos] = useState([])
+
+    useEffect(() => {
+        pedirDatos()
+            .then( (res) => {
+                setProductos(res)
+            })
+            .catch( (error) => {
+                console.log(error)
+            })
+            .finally(() => {
+                // console.log("Fin del proceso")
+            })
+    }, [])
+
+
+    return (
         <div>
-            <h2>NUESTRAS VARIEDADES</h2>
-            <Contador/>
+            <ItemList productos={productos}/>
         </div>
-           
-
-    );
+    )
 }
 
-export default ItemListConteiner
+export default ItemListContainer
