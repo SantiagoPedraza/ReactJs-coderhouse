@@ -1,0 +1,90 @@
+h1{
+    text-align: center;
+    color: crimson;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2{
+    text-align: center;
+    color: crimson;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h3{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a.nav-link{
+    color: rgb(255, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    
+    
+}
+body{
+    background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/new-fondo1lateral.jpg");
+}
+a.navbar-brand{
+    color: rgb(152, 2, 2);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+img{
+    width: 100%;
+    height: 600px;
+
+}
+
+.Card{
+    width: 400px;
+    height: 400px;
+}
+
+p{
+    color: crimson;
+}
+
+.mx-2{
+    color: crimson;
+}
+
+.product-card {
+    display: flexbox;
+    text-align: center;
+    grid-template-rows: 2px;
+    }
+    .productos-flex{
+        
+        padding: 20px;
+        
+    }
+    .img-producto{
+        width: 20rem;
+        height: 12rem;
+    }
+    .productos-h2
+    {
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-top: 20px;
+        text-decoration: underline 2px black;
+    }
+    .btnAddCart{
+        margin-top: 1rem;
+    }
+  
+    .container-cards{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr 1fr ;
+            grid-template-columns: 1fr 1fr 1fr ;
+        gap: 25px;
+        margin: 10px 0;
+        
+        
+        
+    }
+    .card-body{
+        text-align: center;
+    }
+
+
+

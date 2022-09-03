@@ -1,10 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
-import './navstyle.css';
 
-
-
-
-const IndividualIntervalsExample = () => {
+function IndividualIntervalsExample() {
   return (
     <Carousel>
       <Carousel.Item interval={1000}>

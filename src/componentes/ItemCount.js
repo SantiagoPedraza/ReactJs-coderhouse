@@ -1,57 +1,41 @@
-import { useState, useEffect } from "react"
-
+import { useState } from "react";
 
 const Contador = () => {
+    //let counter = 1;
+    const [counter, SetCounter] = useState(0)
+    const [AddCart, SetAddCart] = useState(true)
 
-    const [counter, setCounter] = useState(0)
-   
 
-    const handleSumar = () => {
-        setCounter(counter + 1)
+    const handleSuma = () => {
+        SetCounter(counter + 1)
     }
 
-    const handleRestar = () => {
-        if (counter > 0 ) {
-            setCounter(counter - 1)
+    const handleResta = () => {
+        if (counter > 0) {
+            SetCounter(counter - 1)
         }
     }
-
-
-    // console.log("Contador Montado!")
-    
-    useEffect( () => {
-        console.log("Contador Montado!")
-        
-        return () => {
-            console.log("Contador Desmontado")
+    const handleAddCart = () => {
+        if(counter>0){
+        SetAddCart()
+        SetCounter(0)
         }
-    }, [] )
-    
-    useEffect(() => {
-        if (counter % 2 === 0) {
-            console.log(counter)
-        }
-
-        
-    }, [counter])
-
-
-
+    }
     return (
-        <div className="container my-5">
-            <h2>Contador</h2>
-            <hr/>
+        <div className="botton-producto">
 
-            <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
+            <hr />
+            <button onClick={handleResta} className="btn btn-outline-danger">-</button>
             <span className="mx-2">{counter}</span>
-            <button onClick={handleSumar} className="btn btn-primary">+</button>
-
-            <p>Último click: {new Date().toLocaleString()}</p>
-            <hr/>
-
-           
+            <button onClick={handleSuma} className="btn btn-primary">+</button>
+            <div>
+                <button onClick={handleAddCart} className="btn btn-warning btnAddCart">{AddCart ? "Agregar al Carrito" : "Se agrego al Carrito "}</button>
+            </div>
         </div>
-    )
-}
 
-export default Contador
+
+    );
+
+
+}
+export default Contador;
