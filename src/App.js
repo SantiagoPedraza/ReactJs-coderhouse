@@ -1,38 +1,33 @@
-
 import './App.css';
-import {NavBar} from './componentes/NavBar'
-import IndividualIntervalsExample from './componentes/carrusel';
-import GridExample from './componentes/cards'
+import NavBar from './componentes/NavBar';
+import ItemListContainer from './componentes/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListConteiner from './componentes/ItemListConteiner';
-
+import GridExample from './componentes/cards';
+import IndividualIntervalsExample from './componentes/carrusel';
+import ItemDetailContainer from './componentes/ItemnDetailConteiner';
 
 function App() {
   return (
-    
+  <div>
+    <NavBar/>
     <div>
-      <header>
-      <div>
-      <NavBar/>
-      
-      </div>
+    < IndividualIntervalsExample/>
+    hr
 
-    </header>
-    <body>
-      <div>
-      <IndividualIntervalsExample/>
-      </div>
-      <div>
-      <ItemListConteiner titulo="nuestras variedads"/>
-      <GridExample/>
-      </div>
+    <h1>Nuestras variedades</h1>
+    <GridExample/>
+    hr
+    <ItemDetailContainer idProducto={1}/>
 
 
-    </body>
+    <ItemListContainer/>
+
     </div>
+
     
+  </div>
+
   );
 }
 
 export default App;
-
