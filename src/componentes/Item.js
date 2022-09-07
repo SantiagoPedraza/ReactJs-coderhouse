@@ -1,6 +1,6 @@
 import Contador from './ItemCount';
 import './styles.css';
-import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 
 const Item = ({ producto }) => {
@@ -14,7 +14,7 @@ const Item = ({ producto }) => {
         <p>Precio: ${producto.precio}</p>
           <p>Categoria: {producto.categoria}</p>
         </Card.Text>
-        <Button variant="primary">Ver Más</Button>
+        <Link to={`/item/${producto.id}`} className="btn btn-primary " >Ver Más</Link>
         <Contador/>
       </Card.Body>
     </Card>
