@@ -7,34 +7,28 @@ import IndividualIntervalsExample from './componentes/carrusel';
 import ItemDetailContainer from './componentes/ItemnDetailConteiner';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+
 function App() {
   return (
   <div>
     
-
-    <NavBar/>
-    <div>
-    < IndividualIntervalsExample/>
-    hr
-
-    <h1>Nuestras variedades</h1>
-    <GridExample/>
-    hr
-
     <BrowserRouter>
 
-      <NavBar />
+      <NavBar/>
+      < IndividualIntervalsExample/>
+      <h1>Nuestras variedades</h1>
 
       <Routes>
+        <Route path='/' element={<GridExample/>} />
         <Route path='/' element={<ItemListContainer />} />
         <Route path='/item/:itemId' element={<ItemDetailContainer/>} />
         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
 
     </BrowserRouter>
-    
-    </div>
 
+   
+    
     
   </div>
 
