@@ -86,5 +86,13 @@ p{
         text-align: center;
     }
 
+    img{
+        width: 50%;
+        height: 600px;
+    }
 
+    div {
+        display: block;
+        text-align: center;
+    }
 

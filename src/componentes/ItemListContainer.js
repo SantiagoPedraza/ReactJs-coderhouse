@@ -3,45 +3,50 @@ import './styles.css';
 import { useEffect,useState } from "react";
 import { pedirDatos } from "../helper/pedirDatos";
 import ItemList from "./ItemList";
+import { useParams } from 'react-router-dom'
 
 
 
 const ItemListContainer = () => {
+   
+  const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(true)
 
-    const [productos, setProductos] = useState([])
+  const { categoryId } = useParams()
+  console.log(categoryId)
 
-    useEffect(() => {
-        pedirDatos()
-           .then( (res) => {
-                setProductos(res)
-            })
-            .catch( (error) => {
-                console.log(error)
-            })
-            .finally(() => {
-                 console.log("Fin del proceso")
-            })
-    }, [])
+  useEffect(() => {
+      setLoading(true)
+
+      pedirDatos()
+          .then( (res) => {
+              if (!categoryId) {
+                  setProductos(res)
+              } else {
+                  setProductos( res.filter((prod) => prod.category === categoryId) )
+              }
+          })
+          .catch( (error) => {
+              console.log(error)
+          })
+          .finally(() => {
+              setLoading(false)
+          })
+  }, [categoryId])
+
+
   return (
-    <div>
-     
-    
-
-      <h2 className="productos-h2">Nuestros Productos</h2>
-      <div className="productos-flex container">
-        
-  
-        
-      <ItemList productos={productos}/>
-        
-
+      <div>
+          {
+              loading 
+              ? <h2>Cargando...</h2>
+              : <ItemList productos={productos}/>
+          }
       </div>
-    </div>
-
   )
 }
 
-export default ItemListContainer;
+export default ItemListContainer
 
 
 
