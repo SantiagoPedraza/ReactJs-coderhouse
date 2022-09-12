@@ -1,41 +1,45 @@
-import { useState } from "react";
-
-const Contador = () => {
-    //let counter = 1;
-    const [counter, SetCounter] = useState(0)
-    const [AddCart, SetAddCart] = useState(true)
 
 
-    const handleSuma = () => {
-        SetCounter(counter + 1)
-    }
+const Contador = ({max, counter, setCounter, handleAgregar}) => {
 
-    const handleResta = () => {
-        if (counter > 0) {
-            SetCounter(counter - 1)
+    const handleRestar = () => {
+        if (counter > 1) {
+            setCounter(counter - 1)
         }
     }
-    const handleAddCart = () => {
-        if(counter>0){
-        SetAddCart()
-        SetCounter(0)
+    
+    const handleSumar = () => {
+        if (counter < max ) {
+            setCounter(counter + 1)
         }
     }
+
+
     return (
-        <div className="botton-producto">
+        <div>
+            <button 
+                className="btn btn-outline-primary"
+                onClick={handleRestar}
+            >
+                -
+            </button>
 
-            <hr />
-            <button onClick={handleResta} className="btn btn-outline-danger">-</button>
-            <span className="mx-2">{counter}</span>
-            <button onClick={handleSuma} className="btn btn-primary">+</button>
-            <div>
-                <button onClick={handleAddCart} className="btn btn-warning btnAddCart">{AddCart ? "Agregar al Carrito" : "Se agrego al Carrito "}</button>
-            </div>
+            <span className="mx-3">{counter}</span>
+
+            <button 
+                className="btn btn-primary"
+                onClick={handleSumar}
+            >
+                +
+            </button>
+
+            <br/>
+
+            <button onClick={handleAgregar} className="btn btn-success my-2">
+                Agregar al carrito
+            </button>
         </div>
-
-
-    );
-
-
+    )
 }
-export default Contador;
+
+export default Contador

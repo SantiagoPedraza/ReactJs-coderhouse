@@ -23,10 +23,41 @@ body{
     background-image: url("https://www.solofondos.com/wp-content/uploads/2015/11/new-fondo1lateral.jpg");
 }
 a.navbar-brand{
-    color: rgb(152, 2, 2);
+    color: rgb(255, 0, 0);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.header-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.header-navbar {
+    min-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.header-navlink {
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+    
+
+}
+
+a.header-navlink{
+    margin: 10px;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    margin: 15px;
+}
 img{
     width: 100%;
     height: 600px;
@@ -36,6 +67,8 @@ img{
 .Card{
     width: 400px;
     height: 400px;
+    text-align: center;
+    margin: 20px;
 }
 
 p{
@@ -58,7 +91,7 @@ p{
     }
     .img-producto{
         width: 20rem;
-        height: 12rem;
+        height: 25rem;
     }
     .productos-h2
     {
@@ -69,6 +102,7 @@ p{
     }
     .btnAddCart{
         margin-top: 1rem;
+        color: blue;
     }
   
     .container-cards{
@@ -78,7 +112,7 @@ p{
             grid-template-columns: 1fr 1fr 1fr ;
         gap: 25px;
         margin: 10px 0;
-        
+        text-align: center;
         
         
     }
@@ -95,4 +129,5 @@ p{
         display: block;
         text-align: center;
     }
+
 

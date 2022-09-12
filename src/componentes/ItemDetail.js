@@ -1,19 +1,50 @@
+import {  useState } from "react"
 import './styles.css';
 import Contador from './ItemCount';
-
+import Select from "./select";
 
 const ItemDetail = ({item}) => {
 
+    const [cantidad, setCantidad] = useState(1)
+    const [talle, setTalle] = useState(item.talles[0].value)
+    const [color, setColor] = useState(item.colores[0].value)
+
+    const handleAgregar = () => {
+        const itemToCart = {
+            id: item.id,
+            precio: item.precio,
+            nombre: item.nombre,
+            talle,
+            cantidad,
+            color
+        }
+
+        console.log(itemToCart)
+        // console.log({
+        //     ...item,
+        //     cantidad
+        // })
+    }
+
     return (
-        <div className="container container-details">
-            <img scr={item.img} className="img-detail"/>
-            <div className='description'>
-            <h3>{item.nombre} </h3>
-            <p>Descripcion: {item.desc}</p>
-            <p>Categoria: {item.categoria}</p>
-            <h4>Precio: ${item.precio}</h4>
-            <Contador/>
-            </div>
+        <div className="container my-5">
+            <img src={item.img}/>
+            <h3>{item.nombre}</h3>
+            <p>{item.desc}</p>
+            <p>{item.category}</p>
+            <h4>{item.precio}</h4>
+            <hr/>
+            <Select options={item.talles} onSelect={setTalle}/>
+            <Select options={item.colores} onSelect={setColor}/>
+            <hr/>
+
+            <Contador 
+                max={item.stock}
+                counter={cantidad}
+                setCounter={setCantidad}
+                handleAgregar={handleAgregar}
+            />
+
         </div>
     )
 }

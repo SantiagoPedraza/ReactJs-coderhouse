@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './styles.css';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,9 +16,12 @@ export function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#inicio">inicio</Nav.Link>
-            <Nav.Link href="#shop">shop</Nav.Link>
-            <Nav.Link href="#sobre nosotros">sobre nosotros</Nav.Link>
+            <Link to='/productos/vino' className="header-navlink">Vinos</Link>
+            
+            <Link to='/productos/vodka' className="header-navlink">Vodkas</Link>
+
+            <Link to='/productos/Gin' className="header-navlink">Gins</Link>
+            
             <CartWidget/>
           </Nav>
         </Navbar.Collapse>
