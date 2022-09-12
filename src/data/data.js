@@ -6,7 +6,7 @@ export const stock = [
         img: 'https://distribuidorabelgrano.com/wp-content/uploads/2019/08/absolut-elyx.jpg',
         stock: 50,
         desc: 'El vodka mas fino',
-        categoria:'vodka'
+        category:'vodka'
 
     },
     {
