@@ -22,8 +22,9 @@ export function NavBar() {
 
             <Link to='/productos/Gin' className="header-navlink">Gins</Link>
             
-            <CartWidget/>
+           
           </Nav>
+          <CartWidget/>
         </Navbar.Collapse>
     
       </Container>
