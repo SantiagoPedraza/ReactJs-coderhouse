@@ -1,5 +1,6 @@
-import { useCartContext } from "../../context/CartContext"
-import { BsFillTrashFill } from 'react-icons/bs'
+import { useCartContext } from "../context/CartContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 const Cart = () => {
@@ -21,7 +22,7 @@ const Cart = () => {
                     <p>Cantidad: {item.cantidad}</p>
                     <small>Color: {item.color}</small>
                     <small>Talle: {item.talle}</small>
-                    <button onClick={() => removeItem(item.id)} className="btn btn-danger mx-2"><BsFillTrashFill/></button>
+                    <button onClick={() => removeItem(item.id)} className="btn btn-danger mx-2"> <FontAwesomeIcon icon={faTrash} size="2x" color="red"/></button>
                     <hr/>
                 </div>
             ))}
