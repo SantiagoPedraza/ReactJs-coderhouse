@@ -12,10 +12,13 @@ export function NavBar() {
   return (
     <Navbar bg="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">TOMANDO ANDO</Navbar.Brand>
+      <Link to="/"><h1 className="header-title">TOMANDO ANDO</h1></Link>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+
+            
             <Link to='/productos/vino' className="header-navlink">Vinos</Link>
             
             <Link to='/productos/vodka' className="header-navlink">Vodkas</Link>
