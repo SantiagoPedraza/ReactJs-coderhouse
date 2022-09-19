@@ -1,7 +1,6 @@
 import {  useState } from "react"
 import './styles.css';
 import Contador from './ItemCount';
-import Select from "./select";
 import { Link } from "react-router-dom"
 import { useCartContext } from "../context/CartContext";
 
@@ -11,17 +10,15 @@ const ItemDetail = ({item}) => {
     console.log(cart)
 
     const [cantidad, setCantidad] = useState(1)
-    const [contenido, setContenido] = useState(item.talles[0].value)
-    const [sabores, setSabores] = useState(item.colores[0].value)
+   
 
     const handleAgregar = () => {
         const itemToCart = {
             id: item.id,
             precio: item.precio,
             nombre: item.nombre,
-            contenido,
             cantidad,
-            sabores
+        
         }
 
         addToCart(itemToCart)
@@ -34,10 +31,7 @@ const ItemDetail = ({item}) => {
             <p>{item.desc}</p>
             <p>{item.category}</p>
             <h4>{item.precio}</h4>
-            <hr/>
-            <Select options={item.talles} onSelect={setContenido}/>
-            <Select options={item.colores} onSelect={setSabores}/>
-            <hr/>
+            
             
 
             {

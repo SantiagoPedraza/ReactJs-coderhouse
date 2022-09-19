@@ -7,13 +7,7 @@ export const stock = [
         stock: 50,
         desc: 'El vodka mas fino',
         category:'vodka',
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-
-        ]
+    
 
     },
     {
@@ -24,30 +18,6 @@ export const stock = [
         stock: 50,
         desc: 'Vodka Frances',
         category:'vodka',
-        sabores: [
-            {
-                value: 'L-Orange',
-                text: 'L-Orange'
-            },
-            {
-                value: 'Citron',
-                text: 'Citron'
-            },
-            {
-                value: 'La Poire',
-                text: 'La Poire'
-            }
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
     },
     {
         id: 3,
@@ -57,27 +27,7 @@ export const stock = [
         stock: 50,
         desc: 'El gin mas refrescante',
         category:'Gin',
-        sabores: [
-            {
-                value: 'Normal',
-                text: 'Normal'
-            },
-            {
-                value: 'Raspberry',
-                text: 'Raspberry'
-            },
-
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
+      
     },
     {
         id: 4,
@@ -87,27 +37,7 @@ export const stock = [
         stock: 50,
         desc: 'El vino mas fino',
         category:'vino',
-        sabores: [
-            {
-                value: 'Tinto',
-                text: 'Tinto'
-            },
-            {
-                value: 'Blanco',
-                text: 'Blanco'
-            },
-
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
+    
     },
     {
         id: 5,
@@ -117,27 +47,7 @@ export const stock = [
         stock: 50,
         desc: 'El vino mas dulce',
         category:'vino',
-        sabores: [
-            {
-                value: 'Tinto',
-                text: 'Tinto'
-            },
-            {
-                value: 'Blanco',
-                text: 'Blanco'
-            },
-
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
+    
     },
     {
         id: 6,
@@ -147,27 +57,7 @@ export const stock = [
         stock: 50,
         desc: 'El sabor mas profundo',
         category:'vino',
-        sabores: [
-            {
-                value: 'Tinto',
-                text: 'Tinto'
-            },
-            {
-                value: 'Blanco',
-                text: 'Blanco'
-            },
-
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
+      
     },
     {
         id: 7,
@@ -177,27 +67,7 @@ export const stock = [
         stock: 50,
         desc: 'El Gin mas peculiar',
         category:'Gin',
-        sabores: [
-            {
-                value: 'Tinto',
-                text: 'Tinto'
-            },
-            {
-                value: 'Blanco',
-                text: 'Blanco'
-            },
-
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
+   
     },
     {
         id: 8,
@@ -207,27 +77,7 @@ export const stock = [
         stock: 50,
         desc: 'El vodka mas antiguo',
         category:'vodka',
-        sabores: [
-            {
-                value: 'Normal',
-                text: 'Normal'
-            },
-            {
-                value: 'Intense',
-                text: 'Intense'
-            },
-
-        ],
-        contenido: [
-            {
-                value: '750ml',
-                text: 'mediana'
-            },
-            {
-                value: '1lt',
-                text: 'grande'
-            },
-        ]
+   
     },
 
 ]
